@@ -124,10 +124,10 @@
 				
 			</nav>
 			<section id="content">
-				<div class="contentbox" id="contentbox-1"><h1>Div 1</h1></div>
-				<div class="contentbox" id="contentbox-2"><h1>Div 2</h1></div>
-				<div class="contentbox" id="contentbox-3"><h1>Div 3</h1></div>
-				<div class="contentbox" id="contentbox-4"><h1>Div 4</h1></div>
+				<div class="contentbox" id="contentbox-1"><h1>Första boxen</h1></div>
+				<div class="contentbox" id="contentbox-2"><h1>Andra boxen</h1></div>
+				<div class="contentbox" id="contentbox-3"><h1>Tredje boxen</h1></div>
+				<div class="contentbox" id="contentbox-4"><h1>Fjärde boxen</h1></div>
 			</section>
 		</div>
 
@@ -137,6 +137,14 @@
 			(function  () {
 				
 				var sl_smoothScroller = {
+
+					/**
+					 * Author: Stefan Ledin
+					 * stefanledin.se
+					 * @stefanledin
+					 * 
+					 * Version 1.1
+					 */
 
 					menu : '',
 
@@ -160,7 +168,7 @@
 						var self = this;
 
 						$(window).scroll(function  () {
-							if (self.menuPosition.top <= window.scrollY) {
+							if (self.menuPosition.top <= $(window).scrollTop()) {
 								self.menu.addClass('fixedmenu');
 								$('#content').css('margin','142px 0 0 0');
 								$('#wrapper').css('margin', '90px auto');
